@@ -1,67 +1,20 @@
 *{
   color: #302e2e;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 .App {
   text-align: center;
   font-family: 'Poppins', sans-serif;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.App-title{
-  text-align: 'left';
-}
-
-.App-header {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #302e2e;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.header-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-}
-
-.App-header h1 {
-  text-align: left;
+  height: auto;
 }
 
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
 
 body, .App {
   font-family: 'Poppins', sans-serif;
@@ -84,21 +37,43 @@ body, .App {
   background-color: #217dbb;
 }
 
+
+#live-btn {
+  display: inline-block;
+  background-color: #19d285;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+#live-btn:hover {
+  background-color: #128857;
+}
+
 .App-upload{
   height: 30vh;
-  width: auto;
+  width: 50%;
   justify-content: center;
   margin-top: 10%;
+  background-color: #98d2f875;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  border-top: #38a8f3 5px solid;
 }
 .App-upload h2 {
-   color: #302e2e;
    font-size: 2rem;
 }
 
 .preview{
   display: inline-block;
-  max-width: 50%;
-  max-height: 300px;
+  max-width: 80%;
+  max-height: auto;
   overflow: auto;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -106,5 +81,106 @@ body, .App {
     .preview{
       max-width: 90%;
     }
+    .App-upload{
+      width: 70%;
+      height: auto;
+      border-radius: 25px;
+    }
+    .App-upload h2 {
+      font-size: 1.5rem;
+    }
+    .App-Live{
+      width: 70%;
+      height: auto;
+      border-radius: 25px;
+    }
+    .App-upload h2 {
+      font-size: 1.5rem;
+    }
+    .App footer{
+      font-size: 0.8rem;
+      padding: 3px 0;
+
+    }
+    .App header{
+      padding: 0;
+    }
+    
   }
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content */
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 80%;
+  position: relative;
+  text-align: center;
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.popup-close:hover {
+  color: #000;
+}
+
+.App-Live{
+  height: 30vh;
+  width: 50%;
+  justify-content: center;
+  margin-top: 10%;
+  background-color: #19d28528;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  border-top: #19d285 5px solid;
+}
+
+.camera-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.camera-btn:hover {
+    background-color: #2980b9;
+}
+
+.camera-btn:active {
+    transform: translateY(1px);
 }
