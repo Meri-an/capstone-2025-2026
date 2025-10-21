@@ -3,49 +3,66 @@ export default function Home() {
     <div className="container">
       <div className="left-panel">
         <div className="image-container">
-          {/* Decorative yellow shape */}
+          {/* Traditional banana leaf pattern background */}
           <div className="decorative-shape" />
-          {/* Person holding flowers */}
-          <img
-            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=320&h=320&facepad=2"
-            alt="Person holding flowers"
+          <div className="banana-pattern" />
+          {/* Banana disease image */}
+          <img 
+            src="https://github.com/Meri-an/capstone-2025-2026/blob/main/home.png?raw=true"
+            alt="blacksigatoka"
             className="profile-image"
           />
         </div>
         <h1 className="title">
-          Identify Banana<br />Disease
+          Banana Disease<br />Identification System
         </h1>
+        <p className="subtitle">Advanced Agricultural Diagnostics Platform</p>
         <div className="disease-tags">
           <span className="disease-tag black-sigatoka">Black Sigatoka Disease</span>
-          <span> and </span>
-          <span className="disease-tag fusarium-wilt">Fusarium Wilt</span>
+          <span className="disease-separator"> | </span>
+          <span className="disease-tag fusarium-wilt">Fusarium Wilt Disease</span>
         </div>
       </div>
 
       {/* Right: Upload Box */}
       <div className="right-panel">
         <div className="upload-box">
+          <div className="box-header">
+            <h3>Disease Detection</h3>
+          </div>
           <button className="upload-button">
             <a href="/upload">Upload Image</a>
           </button>
-          <div className="or-text">
-            or
+          <div className="or-divider">
+            <span className="or-text">OR</span>
           </div>
           <button className="capture-button">
             <a href="/live">Live Capture</a>
           </button>
         </div>
         <div className="sample-images-section">
-          No image?<br />Try one of these:
+          <div className="sample-header">Sample Images Available:</div>
           <div className="sample-images">
-            <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_1.jpg?raw=true" alt="sample1" className="sample-img" />
-            <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_12.jpg?raw=true" alt="sample2" className="sample-img" />
-            <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_4.jpg?raw=true" alt="sample3" className="sample-img" />
-            <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_6.jpg?raw=true" alt="sample4" className="sample-img" />
+            <div className="sample-wrapper">
+              <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_1.jpg?raw=true" alt="sample1" className="sample-img" />
+              <span className="sample-label">Sample 1</span>
+            </div>
+            <div className="sample-wrapper">
+              <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_12.jpg?raw=true" alt="sample2" className="sample-img" />
+              <span className="sample-label">Sample 2</span>
+            </div>
+            <div className="sample-wrapper">
+              <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_4.jpg?raw=true" alt="sample3" className="sample-img" />
+              <span className="sample-label">Sample 3</span>
+            </div>
+            <div className="sample-wrapper">
+              <img src="https://github.com/Meri-an/capstone-2025-2026/blob/main/Image_6.jpg?raw=true" alt="sample4" className="sample-img" />
+              <span className="sample-label">Sample 4</span>
+            </div>
           </div>
         </div>
         <div className="terms">
-          By uploading an image <a href="#" className="terms-link">Terms of Service</a>
+          By uploading an image, you agree to our <a href="#" className="terms-link">Terms of Service</a>
         </div>
       </div>
 
@@ -55,28 +72,43 @@ export default function Home() {
           justify-content: center;
           align-items: center;
           padding: 48px 0 0 0;
+          background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+          min-height: calc(100vh - 150px);
         }
         
         .left-panel {
             flex: 1;
-            max-width: 500px;
+            max-width: 550px;
             padding-left: 60px;
         }
         
         .image-container {
             position: relative;
-            width: 320px;
-            height: 320px;
+            width: 380px;
+            height: 340px;
         }
         
         .decorative-shape {
             position: absolute;
-            top: 40px;
-            left: 40px;
-            width: 180px;
-            height: 120px;
-            background: #ffe25c;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+            height: 140px;
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
             border-radius: 60px 80px 80px 60px;
+            z-index: 0;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+        
+        .banana-pattern {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #5dade2 0%, #3498db 100%);
+            border-radius: 50%;
+            opacity: 0.2;
             z-index: 0;
         }
         
@@ -84,49 +116,74 @@ export default function Home() {
             position: absolute;
             top: 0;
             left: 0;
-            width: 320px;
+            width: 400px;
             height: 320px;
-            object-fit: cover;
-            border-radius: 16px;
+            border-radius: 12px;
             z-index: 1;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            border: 3px solid #2c3e50;
         }
         
         .title {
-            font-size: 48px;
+            font-size: 46px;
             font-weight: 700;
-            margin: 48px 0 0 0;
-            color: #23272f;
+            margin: 48px 0 12px 0;
+            color: #2c3e50;
             line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #5a6c7d;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
         }
         
         .disease-tags {
-            font-size: 24px;
-            font-weight: 500;
-            margin-top: 16px;
-            line-height: 1.5;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 20px;
+            line-height: 1.8;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
         
         .disease-tag {
-            padding: 2px 8px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            border-radius: 20px;
             display: inline-block;
-            margin: 4px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .disease-tag:hover {
+            transform: translateY(-2px);
+        }
+        
+        .disease-separator {
+            color: #7f8c8d;
+            font-weight: 400;
         }
         
         .black-sigatoka {
-            background: #1976d2;
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
             color: #fff;
+            border: 2px solid #2c3e50;
         }
         
         .fusarium-wilt {
-            background: #ffe25c;
-            color: #23272f;
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: #fff;
+            border: 2px solid #357abd;
         }
         
         .right-panel {
             flex: 1;
-            max-width: 420px;
+            max-width: 450px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -134,96 +191,178 @@ export default function Home() {
         }
         
         .upload-box {
-            background: #fff;
-            border-radius: 32px;
-            box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-            padding: 48px 32px;
-            width: 340px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px 36px;
+            width: 360px;
             text-align: center;
+            border: 1px solid #e1e8ed;
+            position: relative;
+        }
+        
+        .box-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .box-header h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 24px 0;
+            letter-spacing: 0.5px;
         }
         
         .upload-button, .capture-button {
-            border: none;
-            border-radius: 24px;
-            font-size: 22px;
+            border: 2px solid;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: 600;
-            padding: 16px 32px;
+            padding: 14px 32px;
             cursor: pointer;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             width: 100%;
             display: block;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            letter-spacing: 0.5px;
         }
         
         .upload-button {
-            background: #1976d2;
-            color: #fff;
+            background: #4a90e2;
+            color: #ffffff;
+            border-color: #4a90e2;
         }
         
         .upload-button:hover {
-            background: #1565c0;
+            background: #357abd;
+            border-color: #357abd;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
         }
         
         .upload-button a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
         }
         
         .capture-button {
-            background: #19d285;
-            color: #fff;
+            background: #ffffff;
+            color: #4a90e2;
+            border-color: #4a90e2;
         }
         
         .capture-button:hover {
-            background: #16bb78;
+            background: #f5f7fa;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+        }
+        
+        .capture-button a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .or-divider {
+            position: relative;
+            margin: 16px 0;
+        }
+        
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 42%;
+            height: 1px;
+            background: #e1e8ed;
+        }
+        
+        .or-divider::before {
+            left: 0;
+        }
+        
+        .or-divider::after {
+            right: 0;
         }
         
         .or-text {
-            font-size: 18px;
-            color: #23272f;
-            margin-bottom: 8px;
+            font-size: 12px;
+            color: #7f8c8d;
+            font-weight: 500;
+            background: #ffffff;
+            padding: 4px 12px;
+            display: inline-block;
+            letter-spacing: 1px;
         }
         
         .sample-images-section {
-            margin-top: 24px;
-            font-size: 16px;
-            color: #5a6e7f;
+            margin-top: 28px;
             text-align: center;
+        }
+        
+        .sample-header {
+            font-size: 14px;
+            color: #5a6c7d;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
         }
         
         .sample-images {
             display: flex;
-            gap: 12px;
-            margin-top: 8px;
+            gap: 16px;
+            margin-top: 12px;
             justify-content: center;
         }
         
+        .sample-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        
         .sample-img {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
+            border: 2px solid #e1e8ed;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
         
         .sample-img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: #4a90e2;
+        }
+        
+        .sample-label {
+            font-size: 11px;
+            color: #7f8c8d;
+            font-weight: 500;
         }
         
         .terms {
             margin-top: 24px;
             font-size: 12px;
-            color: #5a6e7f;
-            max-width: 340px;
+            color: #7f8c8d;
+            max-width: 360px;
             text-align: center;
+            font-weight: 400;
         }
         
         .terms-link {
-            color: #1976d2;
+            color: #4a90e2;
             text-decoration: none;
+            font-weight: 500;
         }
         
         .terms-link:hover {
@@ -276,6 +415,12 @@ export default function Home() {
             .terms {
               font-size: 10px;
               margin-bottom: 20px;
+        }
+            .black-sigatoka, .fusarium-wilt {
+              font-size: 13px;
+              padding: 6px 12px;
+              margin: auto;
+            }
         }
         
       `}</style>
