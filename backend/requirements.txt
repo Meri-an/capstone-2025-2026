@@ -5,3 +5,5 @@ ultralytics==8.0.200
 numpy==1.24.4
 Pillow==10.0.1
 django-cors-headers==4.3.1
+gunicorn==21.2.0  # Add if missing
+whitenoise==6.6.0
