@@ -302,7 +302,7 @@ function Upload() {
 
     try {
       const startTime = performance.now();
-      const response = await axios.post('http://localhost:8000/api/predict/', formData, {
+      const response = await axios.post('http://https://unplacatory-weepily-jonathon.ngrok-free.dev/api/predict/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
