@@ -33,6 +33,8 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path="/live" element={<Live />} />
           <Route path="/about" element={<About />} />
+   {/* Add a catch-all route */}
+        <Route path="*" element={<NotFound />} />
         </Routes>
          {/* Main Section */}
      
